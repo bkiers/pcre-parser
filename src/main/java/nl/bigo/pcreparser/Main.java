@@ -64,13 +64,9 @@ public class Main {
 
     public static void main(String[] args) throws Exception {
 
-        if (args.length == 0) {
-//      System.err.println("Usage: java -jar pcre-parser-0.1.0.jar \"input to parse\"");
-//      System.exit(1);
-            args = new String[]{"((.)\\1+ (?<YEAR>(?:19|20)\\d{2})) [^]-x]"};
-        }
+        String regex = "((.)\\1+ (?<YEAR>(?:19|20)\\d{2})) [^]-x]";
 
-        PCRELexer lexer = new PCRELexer(new ANTLRInputStream(args[0]));
+        PCRELexer lexer = new PCRELexer(new ANTLRInputStream(regex));
         PCREParser parser = new PCREParser(new CommonTokenStream(lexer));
         ParseTree tree = parser.parse();
 
