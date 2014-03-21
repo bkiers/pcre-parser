@@ -16,7 +16,9 @@ PCRELexer lexer = new PCRELexer(new ANTLRInputStream(regex));
 PCREParser parser = new PCREParser(new CommonTokenStream(lexer));
 ParseTree tree = parser.parse();
 
-System.out.println(toStringASCII(tree));
+// ...
 ```
+
+To print an ASCII tree of the generated parse tree, see the [`Main` class](https://github.com/bkiers/pcre-grammar/blob/master/src/main/java/nl/bigo/pcreparser/Main.java).
 
 
