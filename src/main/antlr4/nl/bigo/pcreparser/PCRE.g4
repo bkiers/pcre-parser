@@ -498,11 +498,11 @@ digit
  ;
 
 name
- : letters
+ : alpha_nums
  ;
 
-letters
- : (letter | Underscore)+
+alpha_nums
+ : (letter | Underscore) (letter | Underscore | digit)*
  ;
 
 non_close_parens
