@@ -538,7 +538,7 @@ BlockQuoted : '\\Q' .*? '\\E';
 //         \xhh       character with hex code hh
 //         \x{hhh..}  character with hex code hhh..
 BellChar       : '\\a';
-ControlChar    : '\\c';
+ControlChar    : '\\c' ASCII;
 EscapeChar     : '\\e';
 FormFeed       : '\\f';
 NewLine        : '\\n';
