@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2014 by Bart Kiers
+ * Copyright (c) 2014-2022 by Bart Kiers
  *
  * The MIT license.
  *
@@ -422,7 +422,8 @@ shared_atom
  | VerticalWhiteSpace
  | NotVerticalWhiteSpace
  | WordChar
- | NotWordChar 
+ | NotWordChar
+ | Backslash . // will match "unfinished" escape sequences, like `\x`
  ;
 
 literal
