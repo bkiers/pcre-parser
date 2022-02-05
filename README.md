@@ -10,9 +10,9 @@ import nl.bigo.pcreparser.*;
 
 // ...
 
-String regex = "((.)\\1+ (?<YEAR>(?:19|20)\\d{2})) [^]-x]";
+String regex = "((.)\\1+ (?<YEAR>(?:19|20)\\d{2})) [^]-x]\\x";
 
-PCRELexer lexer = new PCRELexer(new ANTLRInputStream(regex));
+PCRELexer lexer = new PCRELexer(CharStreams.fromString(regex));
 PCREParser parser = new PCREParser(new CommonTokenStream(lexer));
 ParseTree tree = parser.parse();
 
