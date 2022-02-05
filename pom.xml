@@ -11,9 +11,11 @@
   <name>pcre-parser</name>
 
   <properties>
-    <antlr4.version>4.2</antlr4.version>
+    <antlr4.version>4.9.2</antlr4.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    <maven.compiler.target>1.8</maven.compiler.target>
+    <maven.compiler.source>1.8</maven.compiler.source>
   </properties>
 
   <dependencies>
@@ -119,7 +121,6 @@
           </archive>
         </configuration>
       </plugin>
-
     </plugins>
 
   </build>
