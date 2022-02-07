@@ -26,6 +26,7 @@
  *
  * Project      : PCRE Parser, an ANTLR 4 grammar for PCRE
  * Developed by : Bart Kiers, bart@big-o.nl
+ * Also see     : https://github.com/bkiers/pcre-parser
  */
 grammar PCRE;
 
@@ -171,6 +172,7 @@ non_capture
  : '(' '?' ':' alternation ')'
  | '(' '?' '|' alternation ')'
  | '(' '?' '>' alternation ')'
+ | '(' '?' option_flags ':' alternation ')'
  ;
 
 // COMMENT
@@ -539,7 +541,7 @@ BlockQuoted : '\\Q' .*? '\\E';
 //         \xhh       character with hex code hh
 //         \x{hhh..}  character with hex code hhh..
 BellChar       : '\\a';
-ControlChar    : '\\c' ASCII;
+ControlChar    : '\\c' ASCII?;
 EscapeChar     : '\\e';
 FormFeed       : '\\f';
 NewLine        : '\\n';
