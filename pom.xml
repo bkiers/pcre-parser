@@ -11,7 +11,8 @@
   <name>pcre-parser</name>
 
   <properties>
-    <antlr4.version>4.9.2</antlr4.version>
+    <antlr4.version>4.13.0</antlr4.version>
+    <junit.version>4.13.1</junit.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <maven.compiler.target>1.8</maven.compiler.target>
@@ -32,6 +33,13 @@
       <artifactId>antlr4-maven-plugin</artifactId>
       <version>${antlr4.version}</version>
       <scope>compile</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>${junit.version}</version>
+      <scope>test</scope>
     </dependency>
 
   </dependencies>

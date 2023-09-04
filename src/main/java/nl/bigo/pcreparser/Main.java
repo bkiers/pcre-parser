@@ -37,7 +37,7 @@ public class Main {
         parser.removeErrorListeners();
         parser.addErrorListener(ERROR_LISTENER);
 
-        ParseTree tree = parser.parse();
+        ParseTree tree = parser.pcre();
         StringBuilder builder = new StringBuilder();
 
         walk(tree, builder);
