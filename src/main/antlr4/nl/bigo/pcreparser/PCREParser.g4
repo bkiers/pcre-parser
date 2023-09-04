@@ -231,7 +231,8 @@ character_type
  ;
 
 character_class
- : '[' negate='^'? character_class_atom+ ']'
+ : '[' negate='^'? ']' character_class_atom* ']'
+ | '[' negate='^'? character_class_atom+ ']'
  ;
 
 character_class_atom
@@ -239,7 +240,8 @@ character_class_atom
  | posix_character_class
  | character
  | character_type
- | ~']'
+ | '\\' .
+ | ~( '\\' | ']' )
  ;
 
 character_class_range
