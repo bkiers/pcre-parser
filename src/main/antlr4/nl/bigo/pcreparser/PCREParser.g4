@@ -236,11 +236,11 @@ character_class
  ;
 
 character_class_atom
- : character_class_range
+ : quoting
+ | character_class_range
  | posix_character_class
  | character
  | character_type
- | '\\' .
  | ~( '\\' | ']' )
  ;
 
@@ -268,8 +268,8 @@ match_point_reset
  ;
 
 quoting
- : '\\' .
- | '\\' 'Q' .*? '\\' 'E'
+ : '\\' 'Q' .*? '\\' 'E'
+ | '\\' .
  ;
 
 // Helper rules
